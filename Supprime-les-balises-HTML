@@ -1,0 +1,39 @@
+###########################################################################################
+#                     Supprime les balises HTML et PHP d'une chaîne
+###########################################################################################
+
+###########################################
+# Exemple 1
+###########################################
+
+<?php
+$text = '<p>Test paragraph.</p><!-- Comment --> <a href="/manuel-php/" data-lbox="1" title="Manuel PHP - Other text">Other text</a>';
+echo strip_tags($text);
+
+ 
+// Autorise <p> et <a>
+echo strip_tags($text, '<p><a>');
+?>
+
+###########################################
+# Exemple 2
+###########################################
+<?php
+if ($item->answer) 
+{
+    $text = $item->answer;
+    
+   echo strip_tags($text);
+
+}
+else
+{
+  if ($cat->description) {
+     echo $cat->description;
+  } else {
+     
+     echo config('meta_description') ;
+      
+  }
+}
+
