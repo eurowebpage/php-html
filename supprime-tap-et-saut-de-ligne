@@ -8,6 +8,8 @@
 
 <?php
 $limite = str_replace("\n","",$limite);
+$limite = str_replace("\r","",$limite); 
+$limite = str_replace("\t","",$limite); 
 
 
 ###########################################
@@ -21,6 +23,8 @@ if ($item->answer)
     
 $limite = strip_tags($text);
 $limite = str_replace("\n","",$limite);   // ICI ...
+$limite = str_replace("\r","",$limite);   // ICI ...
+$limite = str_replace("\t","",$limite);   // ICI ...
 echo substr($limite, 0, 150);
 }
 else
