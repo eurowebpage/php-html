@@ -1,0 +1,37 @@
+###########################################################################################
+#                   Supprimer les tab et retour chariot dans une chaine
+###########################################################################################
+
+###########################################
+# Exemple 1
+###########################################
+
+<?php
+$limite = str_replace("\n","",$limite);
+
+
+###########################################
+# Exemple 2 insertion
+###########################################
+
+<?php
+if ($item->answer) 
+{
+    $text = $item->answer;
+    
+$limite = strip_tags($text);
+$limite = str_replace("\n","",$limite);   // ICI ...
+echo substr($limite, 0, 150);
+}
+else
+{
+  if ($cat->description) {
+     echo $cat->description;
+  } else {
+     
+     echo config('meta_description') ;
+      
+  }
+}
+
+
